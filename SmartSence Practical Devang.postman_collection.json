@@ -1,0 +1,129 @@
+{
+	"variables": [],
+	"info": {
+		"name": "SmartSence Practical Devang",
+		"_postman_id": "a402e2a8-c707-1127-f54a-92c58ad8fb2c",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "registration",
+			"request": {
+				"url": "http://localhost:3000/users/sign-up",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\"\t:\"abhay\",\n\t\"email\" : \"ziyan@gmail.com\",\n\t\"password\": \"dev123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"url": "http://localhost:3000/users/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\" : \"devang.bhagdev@gmail.com\",\n\t\"password\": \"dev123\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "my profile",
+			"request": {
+				"url": "http://localhost:3000/users/my-profile",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Devang Bhagdev 111\",\n\t\"age\": 34,\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk0NjgwM2U3NzE5MWMwZjE2NDlmNjMiLCJuYW1lIjoiRGV2YW5nIGJoYWdkZXYiLCJlbWFpbCI6ImRldmFuZy5iaGFnZGV2QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMjI3ZWRmN2M4NmMwMmE0NGQxN2VlYzlhYTViMzBjZDEiLCJfX3YiOjAsImlhdCI6MTY3MDY3MDgzNn0.HnqA4lWPYRcldSnRC5k3t4ZvSDV1Lxh2oZ-97bKGQYU\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "list of users",
+			"request": {
+				"url": {
+					"raw": "http://localhost:3000/users/list?page=1&sort=name&direction=desc&search=dev",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "sort",
+							"value": "name",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "direction",
+							"value": "desc",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "search",
+							"value": "dev",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\" : \"Devang Bhagdev 111\",\n\t\"age\": 34,\n\t\"token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Mzk0NjgwM2U3NzE5MWMwZjE2NDlmNjMiLCJuYW1lIjoiRGV2YW5nIGJoYWdkZXYiLCJlbWFpbCI6ImRldmFuZy5iaGFnZGV2QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiMjI3ZWRmN2M4NmMwMmE0NGQxN2VlYzlhYTViMzBjZDEiLCJfX3YiOjAsImlhdCI6MTY3MDY3MDgzNn0.HnqA4lWPYRcldSnRC5k3t4ZvSDV1Lxh2oZ-97bKGQYU\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

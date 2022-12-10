@@ -76,7 +76,7 @@ router.post('/my-profile', function(req, res) {
 
 router.get('/list', function(req, res) {
   let searchParams = req.query;
-  let limit = 2;
+  let limit = 10;
   let page = searchParams.page;
   let skip = (page-1)*limit;
   let sort = { name : 1 };
